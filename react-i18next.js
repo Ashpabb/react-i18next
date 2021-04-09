@@ -194,9 +194,7 @@
     "hr": true,
     "img": true,
     "input": true,
-    "keygen": true,
     "link": true,
-    "menuitem": true,
     "meta": true,
     "param": true,
     "source": true,
@@ -251,7 +249,7 @@
     return res;
   };
 
-  var tagRE = /(?:<!--[\S\s]*?-->|<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>)/g;
+  var tagRE = /<[a-zA-Z0-9\-\!\/](?:"[^"]*"|'[^']*'|[^'">])*>/g;
 
 
 
