@@ -102,6 +102,7 @@
     "prepare:amd": "rollup -c rollup.config.js --format amd && rollup -c rollup.config.js --format amd --uglify",
     "prepare:iife": "rollup -c rollup.config.js --format iife && rollup -c rollup.config.js --format iife --uglify",
     "prepare": "npm run clean && npm run prepare:cjs && npm run prepare:es && npm run prepare:umd && npm run prepare:amd && npm run copy",
+    "build": "npm run prepare",
     "preversion": "npm run prepare && git push",
     "postversion": "git push && git push --tags",
     "pretest": "npm run test:typescript && npm run test:typescript:noninterop",
